@@ -20,8 +20,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.pagina_inicial_personalizada, name='pagina_inicial'),  # Mapeia a raiz para sua view
-    path('apresentacao/', include('apresentacao.urls', namespace='apresentacao')),  # Adicionando o prefixo 'apresentacao/'
-    path('blog/', include('blog.urls', namespace='blog')),            # Prefixo /blog/ para o blog
-    path('galeria/', include('galeria.urls', namespace='galeria')),      # Prefixo /galeria/ para a galeria
+    path('', views.pagina_inicial_personalizada, name='pagina_inicial'),  
+    path('apresentacao/', include('apresentacao.urls', namespace='apresentacao')),  
+    path('blog/', include('blog.urls', namespace='blog')),           
+    path('galeria/', include('galeria.urls', namespace='galeria')),      
 ]
