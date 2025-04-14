@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'apresentacao/css/style.css' %}">
+</head>
+<body>
+    <main>
+        <h1>Bem-vindo(a) ao Meu Site de Apresentação</h1>
+
+        <section>
+            <h2>Navegação do Site</h2>
+            <ul>
+                <li><a href="{% url 'apresentacao:sobre' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'apresentacao:contato' %}">Entre em Contato</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

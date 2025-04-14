@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Galeria de Imagens</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'galeria/css/style.css' %}">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Galeria de imagens</h1>
+
+    </header>
+    <main>
+        <div class="gallery">
+            {% for image in images %}
+            <img src="{% static 'galeria/uploads/' %}{{ image }}" alt="{{ image }}">
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Minha Galeria</p>
+    </footer>
+</body>
+</html>
